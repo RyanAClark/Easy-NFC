@@ -1,0 +1,40 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Easynfc.NewTutorial"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="EASY NFC" Style="{StaticResource PhoneTextNormalStyle}" FontSize="22"/>
+            <TextBlock Text="Tutorials" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="56"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0">
+            <Button x:Name="tutorial_1_button" Content="Tag Writing" HorizontalAlignment="Left" VerticalAlignment="Top" Width="228" Click="tutorial_1_button_Click"/>
+            <Button x:Name="tutorial_2_button" Content="Tag Locking" HorizontalAlignment="Left" Margin="228,0,0,0" VerticalAlignment="Top" Width="228" Click="tutorial_2_button_Click"/>
+            <Button x:Name="tutorial_3_button" Content="Custom Function" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" Width="228" Click="tutorial_3_button_Click"/>
+            <Button x:Name="tutorial_4_button" Content="Report Bug" HorizontalAlignment="Left" Margin="228,72,0,0" VerticalAlignment="Top" Width="228" Click="tutorial_4_button_Click"/>
+            <TextBox x:Name="tutorial_text_box" HorizontalAlignment="Left" Height="481" Margin="0,144,0,0" TextWrapping="Wrap" Text="Select a topic to see its tutorial." VerticalAlignment="Top" Width="456" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
+        </Grid>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

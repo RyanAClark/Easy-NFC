@@ -1,0 +1,39 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Easynfc.Report_Bug"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="EASY NFC" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Report Bug" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Margin="12,138,12,0" Grid.RowSpan="2">
+            <TextBlock TextWrapping="Wrap" Text="Please email a detailed description of the bug you encountered to easy_nfc_bug_report@yahoo.com" Margin="10,2,0,0" VerticalAlignment="Top"/>
+            <phone:WebBrowser x:Name="MiniBrowser" Margin="10,137,0,0" HorizontalContentAlignment="Left"/>
+            <TextBox x:Name="URL" Margin="-10,60,91,0" Text="http://www.yahoo.com" VerticalAlignment="Top" InputScope="Url"/>
+            <Button x:Name="Go" Content="Go" HorizontalAlignment="Right" Margin="0,55,0,0" VerticalAlignment="Top" Width="91" Click="Go_Click"/>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
